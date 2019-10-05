@@ -1,10 +1,10 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Dad Jokes
+# Random Jokes App
 
-The [Dad Jokes API](https://icanhazdadjoke.com/api) includes an endpoint for
-[getting a random dad joke](https://icanhazdadjoke.com/api#fetch-a-random-dad-joke).
-Your task is to build an app using React that displays a random dad joke from
+The [Jokes API](https://github.com/15Dkatz/official_joke_api) includes an endpoint for
+[getting a random joke](https://official-joke-api.appspot.com/random_joke).
+Your task is to build an app using React that displays a random joke from
 the API with the push of a button!
 
 ## Prerequisites
@@ -27,17 +27,17 @@ by the end of the lab block for your assignment to be considered complete.
 
 ## Requirements
 
-Your application should make a random dad joke appear when the app loads.
+Your application should make a random joke appear when the app loads.
 
-It should also display a large button that, when clicked, fetches a random dad
-joke from the dad jokes API and displays it to the user. Make it look as close
+It should also display a large button that, when clicked, fetches a random
+joke from the jokes API and displays it to the user. Make it look as close
 to the image provided below.
 
 ![Dad Jokes app mock](./assets/dad-jokes.png)
 
 ## Bonus
 
-Build a queue that stores the 10 most recently retrieved dad jokes!
+Build a queue that stores the 10 most recently retrieved jokes!
 Additionally, add some buttons that let you scroll back and forth through the
 queue.
 
