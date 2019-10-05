@@ -17,22 +17,28 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchJoke();
+    this.getJoke();
   }
 
   handleNewJokeClick = () => {
-    console.log("clicked new joke");
-    this.fetchJoke();
+    this.getJoke();
   };
 
   handleNextClick = () => {
-    console.log("clicked next");
     this.getNextJoke();
   };
 
   handlePreviousClick = () => {
-    console.log("clicked previous");
     this.getPreviousJoke();
+  };
+
+  getJoke = () => {
+    fetch(JOKE_API)
+      .then(response => response.json())
+      .then(response => {
+        this.saveJoke(response);
+        this.setJoke(response);
+      });
   };
 
   getNextJoke = () => {
@@ -57,23 +63,11 @@ class App extends Component {
     }
   };
 
-  fetchJoke = () => {
-    fetch(JOKE_API)
-      .then(response => response.json())
-      .then(response => {
-        console.log(response);
-        this.saveJoke(response);
-        this.setJoke(response);
-      })
-      .catch(error => console.log(error));
-  };
-
   setJoke = joke => {
     this.setState({ currentJoke: joke });
   };
 
   saveJoke = joke => {
-    console.log(this.state.jokes);
     this.setState({
       jokes: this.state.jokes.enqueue(joke)
     });
