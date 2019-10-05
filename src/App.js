@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Queue from "./Queue";
 
-const JOKES_LIMIT = 10;
 const JOKE_API = "https://official-joke-api.appspot.com/random_joke";
 
 // See best practices for organizing your code: https://github.com/airbnb/javascript/tree/master/react#basic-rules
@@ -11,8 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentJoke: { setup: "", punchline: "" },
-      jokes: new Queue(JOKES_LIMIT)
+      currentJoke: { setup: "", punchline: "" }
     };
 
     // this.setJoke = this.setJoke.bind(this);
